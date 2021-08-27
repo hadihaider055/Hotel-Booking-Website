@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #ffffff !important;
+  font-family: "Montserrat", sans-serif;
+}
+.navbarBrand {
+}
+
+.createAccount {
+  border: none;
+  padding: 0.6em;
+  border: 1px solid #87b3fb;
+  border-radius: 0.7em;
+}
+.createAccount:hover {
+  background-color: #87b3fb;
+  padding: 0.6em;
+  border-radius: 0.7em;
+  color: #ffffff;
+  box-shadow: 0 0 20px #87b3fbab;
+  transition: 0.3s all ease-in-out;
+}
+.homeLogin {
+  border: none;
+  padding: 0.6em;
+}
+.navbar__acountDiv {
+  display: flex;
+  align-items: center;
+}

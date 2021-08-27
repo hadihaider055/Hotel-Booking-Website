@@ -1,0 +1,13 @@
+.headerCovid {
+  width: 100vw;
+  height: 50px;
+  background-color: #e8e8e8;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerCovid__text {
+  text-align: center;
+  font-family: "Georama", sans-serif;
+}

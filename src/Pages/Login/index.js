@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./login.module.css";
 import HotelImage from "../../Assets/hotel-img.jpg";
 import { Email, VisibilityOff } from "@material-ui/icons";
 import { Link, useHistory } from "react-router-dom";
 import { auth, signinUser } from "../../Firebase";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { setUser } from "../../Global State/Action";
 
 const LoginPage = () => {
+  const dispatch = useDispatch();
+  const appUser = useSelector((state) => {
+    return state.user;
+  });
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,10 +30,11 @@ const LoginPage = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
         setUserNotCorrect(true);
       });
+    dispatch(setUser(email));
   };
+
   return (
     <div className={styles.login__mainDiv}>
       <img
