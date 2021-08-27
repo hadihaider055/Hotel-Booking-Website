@@ -1,5 +1,9 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyAHOJV5tBQFnwwaLywNVfxSCH2iMLdrN9U",
   authDomain: "hotel-booking-website-746d5.firebaseapp.com",
@@ -13,3 +17,4 @@ const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth();
 export const createUser = createUserWithEmailAndPassword;
+export const signinUser = signInWithEmailAndPassword;

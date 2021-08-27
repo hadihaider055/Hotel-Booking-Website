@@ -84,3 +84,20 @@ input[type="number"] {
   color: #ffffff;
   margin-top: 3%;
 }
+
+/* Media Queries */
+@media (min-width: 701px) and (max-width: 800px) {
+  .form__container {
+    width: 70%;
+  }
+}
+@media (min-width: 300px) and (max-width: 700px) {
+  .form__container {
+    width: 90%;
+  }
+}
+@media (min-width: 100px) and (max-width: 299px) {
+  .form__container {
+    width: 92%;
+  }
+}

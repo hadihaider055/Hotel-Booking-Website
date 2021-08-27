@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./signup.module.css";
 import HotelImage from "../../Assets/hotel-img.jpg";
-import {
-  Person,
-  Phone,
-  Email,
-  VisibilityOff,
-  CheckCircle,
-} from "@material-ui/icons";
+import { Person, Phone, Email, VisibilityOff } from "@material-ui/icons";
 import { Link, useHistory } from "react-router-dom";
 import { auth, createUser } from "../../Firebase";
 import { useDispatch } from "react-redux";
@@ -19,7 +13,6 @@ const SignupPage = () => {
   const appUser = useSelector((state) => {
     return state.user;
   });
-
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [fullName, setFullName] = useState("");
@@ -27,7 +20,6 @@ const SignupPage = () => {
   const [phNumber, setPhNumber] = useState("");
   const handleSignUp = (e) => {
     e.preventDefault();
-    console.log(email, fullName, password, phNumber);
     createUser(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
@@ -78,6 +70,7 @@ const SignupPage = () => {
               id="phoneNumb"
               name="Phone Number"
               placeholder="Phone Number*"
+              minLength="10"
               required
               className={styles.full__name}
               value={phNumber}
@@ -104,6 +97,7 @@ const SignupPage = () => {
               id="password_field"
               name="Password"
               placeholder="Enter Password*"
+              minLength="6"
               required
               className={styles.full__name}
               value={password}

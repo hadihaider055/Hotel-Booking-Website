@@ -1,0 +1,122 @@
+.login__mainDiv {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background__img {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: center center;
+}
+.form__container {
+  background-color: #00000096;
+  width: 40%;
+  height: 60%;
+  position: absolute;
+  text-align: center;
+  padding: 2em 0;
+}
+.login_heading {
+  color: #ffffff;
+  opacity: 1;
+  font-family: "Georama", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.person__icon {
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 3em !important;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+}
+.full__name {
+  width: 80%;
+  height: 3em;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  margin: 1em 0;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.login__submit {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  height: 2.6em;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Georama", sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+.login__submit:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition: 0.4s all ease-in-out;
+}
+.form__bottom {
+  color: #ffffff;
+  margin-top: 3%;
+}
+.notCorrect_user {
+  color: red;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+.fieldIncorrect {
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  border-right: 2px solid red;
+  border-left: none;
+  width: 80%;
+  height: 3em;
+  outline: none;
+  border-radius: 0 10px 10px 0;
+  margin: 1em 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.person__iconFalse {
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 3em !important;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
+  border-right: none;
+}
+/* Media Queries */
+@media (min-width: 701px) and (max-width: 800px) {
+  .form__container {
+    width: 70%;
+  }
+}
+@media (min-width: 300px) and (max-width: 700px) {
+  .form__container {
+    width: 90%;
+  }
+}
+@media (min-width: 100px) and (max-width: 299px) {
+  .form__container {
+    width: 92%;
+  }
+}
