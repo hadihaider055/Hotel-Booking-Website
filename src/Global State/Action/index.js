@@ -1,8 +1,23 @@
-export const SET_USER = "SET_USER";
+export const SIGN_UP = "SIGN_UP";
+export const LOG_IN = "LOG_IN";
+export const SIGN_OUT = "SIGN_OUT";
 
-export const setUser = (user) => {
+export const sign_up = (email) => {
   return {
-    type: SET_USER,
-    payload: user,
+    type: SIGN_UP,
+    payload: email,
+  };
+};
+
+export const log_in = (email) => {
+  return {
+    type: LOG_IN,
+    payload: email,
+  };
+};
+
+export const sign_out = () => {
+  return {
+    type: SIGN_OUT,
   };
 };

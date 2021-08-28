@@ -1,4 +1,4 @@
-import { SET_USER } from "../Action";
+import { SIGN_UP, LOG_IN, SIGN_OUT } from "../Action";
 
 const initialState = {
   user: [],
@@ -6,9 +6,19 @@ const initialState = {
 
 export const AppReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_USER: {
+    case SIGN_UP: {
       return {
         user: [...state.user, action.payload],
+      };
+    }
+    case LOG_IN: {
+      return {
+        user: [...state.user, action.payload],
+      };
+    }
+    case SIGN_OUT: {
+      return {
+        user: [],
       };
     }
     default: {

@@ -6,7 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import { auth, signinUser } from "../../Firebase";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { setUser } from "../../Global State/Action";
+import { log_in, sign_out } from "../../Global State/Action";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -32,7 +32,8 @@ const LoginPage = () => {
         const errorMessage = error.message;
         setUserNotCorrect(true);
       });
-    dispatch(setUser(email));
+    dispatch(sign_out());
+    dispatch(log_in(email));
   };
 
   return (

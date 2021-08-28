@@ -1,0 +1,46 @@
+.exploreMore__div {
+  margin: 0 auto;
+  margin-top: 10%;
+}
+.explore__head {
+  margin: 0 auto;
+}
+.explore__title {
+  font-family: "Georama", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 0.02em;
+}
+.exploreMore__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 70%;
+  flex-wrap: wrap;
+  margin-top: 3em;
+}
+.explore__card {
+  width: 280px;
+  cursor: pointer;
+  margin: 15px;
+  border-radius: 5px;
+}
+.explore__card:hover {
+  transition: 0.5s all ease-in-out;
+  box-shadow: 0 3px 30px #87b3fbab;
+  transform: translateY(-5px);
+}
+.explore__img {
+  width: 100%;
+  height: 220px;
+  border-radius: 5px;
+}
+.explore__cardHeading {
+  font-family: "Georama", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 10px;
+}

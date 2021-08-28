@@ -6,8 +6,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 11.5%;
 }
 .headerCovid__text {
   text-align: center;
   font-family: "Georama", sans-serif;
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+  .headerCovid__text {
+    font-size: 0.75em;
+  }
 }

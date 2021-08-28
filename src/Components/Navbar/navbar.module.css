@@ -1,6 +1,19 @@
 .navbar {
   background-color: #ffffff !important;
   font-family: "Montserrat", sans-serif;
+  z-index: 999;
+  position: absolute;
+  width: 100vw;
+}
+.navbar__active {
+  background-color: #ffffff !important;
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  transition: 0.6s all ease-in-out;
+  padding: 10px 0;
+  width: 100vw;
+  z-index: 999;
+  box-shadow: 0px 10px 20px #87b3fb39;
 }
 .navbarBrand {
 }
@@ -10,6 +23,10 @@
   padding: 0.6em;
   border: 1px solid #87b3fb;
   border-radius: 0.7em;
+  color: #87b3fb;
+  font-weight: 500;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 0.05em;
 }
 .createAccount:hover {
   background-color: #87b3fb;
@@ -22,6 +39,19 @@
 .homeLogin {
   border: none;
   padding: 0.6em;
+  border-radius: 0.7em;
+  color: #87b3fb;
+  font-weight: 500;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 0.05em;
+}
+.homeLogin:hover {
+  background-color: #87b3fb;
+  padding: 0.6em;
+  border-radius: 0.7em;
+  color: #ffffff;
+  box-shadow: 0 0 20px #87b3fbab;
+  transition: 0.3s all ease-in-out;
 }
 .navbar__acountDiv {
   display: flex;

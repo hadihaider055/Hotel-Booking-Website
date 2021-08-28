@@ -6,7 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import { auth, createUser } from "../../Firebase";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { setUser } from "../../Global State/Action";
+import { sign_up } from "../../Global State/Action";
 
 const SignupPage = () => {
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ const SignupPage = () => {
     setFullName("");
     setPassword("");
     setPhNumber("");
-    dispatch(setUser(fullName, phNumber, email));
+    dispatch(sign_up(email));
     history.push("/");
   };
 

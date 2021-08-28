@@ -1,4 +1,11 @@
 .coverImg {
-  width: 100vw;
-  position: absolute;
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  
+}
+@media (min-width: 200px) and (max-width: 450px) {
+  .coverImg {
+    height: 400px;
+  }
 }
