@@ -1,0 +1,15 @@
+.heroForm__main {
+  position: absolute;
+  margin: 0 auto;
+  width: 90vw;
+  top: 30%;
+  left: 0;
+  right: 0;
+}
+.heroForm__heading {
+  font-family: "Georama", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: 600;
+}

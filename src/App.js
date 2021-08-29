@@ -6,6 +6,7 @@ import { store } from "./Global State/Store";
 import LoginPage from "./Pages/Login";
 import { Provider } from "react-redux";
 import HomePage from "./Pages/Home";
+
 function App() {
   return (
     <Router>
