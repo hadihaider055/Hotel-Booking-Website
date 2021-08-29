@@ -12,7 +12,7 @@ const ExploreMore = () => {
       <div className={styles.exploreMore__body}>
         {ExploreMoreData.map((item) => {
           return (
-            <div className={styles.explore__card} id={item.id}>
+            <div className={styles.explore__card} key={item.id}>
               <img
                 src={item.img}
                 alt={item.name}

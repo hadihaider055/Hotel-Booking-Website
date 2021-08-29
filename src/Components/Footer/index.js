@@ -20,7 +20,7 @@ const Footer = () => {
                 key={item.id}
                 className={styles.footer__Link}
               >
-                <p clasName={styles.footer__Name}>{item.name}</p>
+                <p className={styles.footer__Name}>{item.name}</p>
               </Link>
             );
           })}
@@ -33,7 +33,7 @@ const Footer = () => {
                 key={item.id}
                 className={styles.footer__Link}
               >
-                <p clasName={styles.footer__Name}>{item.name}</p>
+                <p className={styles.footer__Name}>{item.name}</p>
               </Link>
             );
           })}
@@ -46,7 +46,7 @@ const Footer = () => {
                 key={item.id}
                 className={styles.footer__Link}
               >
-                <p clasName={styles.footer__Name}>{item.name}</p>
+                <p className={styles.footer__Name}>{item.name}</p>
               </Link>
             );
           })}
@@ -59,7 +59,7 @@ const Footer = () => {
                 key={item.id}
                 className={styles.footer__Link}
               >
-                <p clasName={styles.footer__Name}>{item.name}</p>
+                <p className={styles.footer__Name}>{item.name}</p>
               </Link>
             );
           })}
@@ -72,7 +72,7 @@ const Footer = () => {
                 key={item.id}
                 className={styles.footer__Link}
               >
-                <p clasName={styles.footer__Name}>{item.name}</p>
+                <p className={styles.footer__Name}>{item.name}</p>
               </Link>
             );
           })}
