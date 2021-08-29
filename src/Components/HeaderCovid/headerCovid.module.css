@@ -6,7 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 11.5%;
+  top: 11%;
+  padding: 0 15px 0 0;
 }
 .headerCovid__text {
   text-align: center;
@@ -14,7 +15,15 @@
 }
 
 @media (min-width: 200px) and (max-width: 600px) {
+  .headerCovid {
+    top: 55px;
+  }
   .headerCovid__text {
     font-size: 0.75em;
+  }
+}
+@media (min-width: 601px) and (max-width: 986px) {
+  .headerCovid {
+    top: 55px;
   }
 }

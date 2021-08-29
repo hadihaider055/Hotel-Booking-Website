@@ -5,6 +5,7 @@ import styles from "./home.module.css";
 import HeaderCovid from "../../Components/HeaderCovid";
 import TopDestination from "../../Components/TopDestinations";
 import ExploreMore from "../../Components/ExploreMore";
+import Testimonials from "../../Components/Testimonial";
 const HomePage = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const HomePage = () => {
       <img src={CoverImage} alt="cover-img" className={styles.coverImg} />
       <TopDestination />
       <ExploreMore />
+      <Testimonials />
     </div>
   );
 };
