@@ -5,15 +5,23 @@
   align-items: flex-start;
   margin: 0 auto;
   background-color: #efefef;
-  padding: 30px 60px;
+  padding: 60px 60px 60px 60px;
   flex-wrap: wrap;
-  height: 260px;
+  height: 100%;
+}
+.footer__help,
+.footer__bookingType,
+.footer__services,
+.footer__places,
+.footer__contact {
+  margin: 20px 5px;
 }
 .footer__Link {
   font-weight: 300;
   font-family: "Georama", sans-serif;
   color: #333333;
   letter-spacing: 0.05em;
+  text-align: left;
 }
 .footer__Name {
 }

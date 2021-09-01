@@ -1,4 +1,4 @@
 import { createStore } from "redux";
-import { AppReducer } from "../Reducer";
+import { AppReducer } from "../App Reducer";
 
 export const store = createStore(AppReducer);

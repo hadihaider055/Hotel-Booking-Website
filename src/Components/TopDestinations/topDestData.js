@@ -1,8 +1,8 @@
 import Lahore from "../../Assets/lahore.jpg";
 import Karachi from "../../Assets/karachi.jpg";
 import Islamabad from "../../Assets/islamabad.jpg";
-import Murree from "../../Assets/murree.jpg";
-import Swat from "../../Assets/swat.jpg";
+// import Murree from "../../Assets/murree.jpg";
+// import Swat from "../../Assets/swat.jpg";
 export const TopDestData = [
   {
     id: 1,
@@ -19,14 +19,14 @@ export const TopDestData = [
     name: "Islamabad",
     img: Islamabad,
   },
-  {
-    id: 4,
-    name: "Murree",
-    img: Murree,
-  },
-  {
-    id: 5,
-    name: "Swat",
-    img: Swat,
-  },
+  // {
+  //   id: 4,
+  //   name: "Murree",
+  //   img: Murree,
+  // },
+  // {
+  //   id: 5,
+  //   name: "Swat",
+  //   img: Swat,
+  // },
 ];

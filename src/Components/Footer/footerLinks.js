@@ -62,12 +62,12 @@ export const FooterServices = [
 export const FooterContact = [
   {
     id: 1,
-    name: "Subscribe Newsletter",
-    link: "/subscribe",
+    name: "Newsletter",
+    link: "/newsletter",
   },
   {
     id: 2,
-    name: "Link Property",
-    link: "/link-property",
+    name: "Sell",
+    link: "/sell",
   },
 ];

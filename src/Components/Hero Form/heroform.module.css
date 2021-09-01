@@ -2,9 +2,10 @@
   position: absolute;
   margin: 0 auto;
   width: 90vw;
-  top: 30%;
+  top: 24%;
   left: 0;
   right: 0;
+  height: 100%;
 }
 .heroForm__heading {
   font-family: "Georama", sans-serif;
@@ -47,7 +48,6 @@
   background-color: #ffffff;
 }
 .date-picker-reports {
-  z-index: 99;
 }
 .form__checkinDate:focus,
 .form__checkoutDate:focus {
@@ -99,6 +99,9 @@
   }
 }
 @media (min-width: 606px) and (max-width: 919px) {
+  .heroForm__main {
+    top: 15%;
+  }
   .form__city {
     width: 262.5px;
   }

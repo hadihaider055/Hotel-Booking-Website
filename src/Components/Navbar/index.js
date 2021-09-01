@@ -30,8 +30,7 @@ const NavbarComp = () => {
   };
 
   useEffect(() => {
-    if (appUser.length > 0) {
-      console.log(appUser);
+    if (appUser.length !== 0) {
       setUserLoggedIn(true);
     } else {
       setUserLoggedIn(false);
@@ -70,7 +69,7 @@ const NavbarComp = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Hotels & Homes</Nav.Link>
+            <Nav.Link href="/search">Hotels & Homes</Nav.Link>
             <Nav.Link href="#pricing">Car rentals</Nav.Link>
             <Nav.Link href="#pricing">Appartments</Nav.Link>
           </Nav>
@@ -80,31 +79,23 @@ const NavbarComp = () => {
                 <AccountCircle />
                 <p>{appUser}</p>
               </Nav.Link>
-              <Nav.Link eventKey={2}>
-                <Link to="/signup">
-                  <button
-                    className={styles.createAccount}
-                    onClick={handleSignOut}
-                  >
-                    Sign Out
-                  </button>
-                </Link>
-              </Nav.Link>
+              <Link to="/signup" className={styles.nav__accLink}>
+                <button
+                  className={styles.createAccount}
+                  onClick={handleSignOut}
+                >
+                  Sign Out
+                </button>
+              </Link>
             </Nav>
           ) : (
             <Nav>
-              <Nav.Link>
-                <Link to="/login">
-                  <button className={styles.homeLogin}>Login</button>
-                </Link>
-              </Nav.Link>
-              <Nav.Link eventKey={2}>
-                <Link to="/signup">
-                  <button className={styles.createAccount}>
-                    Create Account
-                  </button>
-                </Link>
-              </Nav.Link>
+              <Link to="/login" className={styles.nav__accLink}>
+                <button className={styles.homeLogin}>Login</button>
+              </Link>
+              <Link to="/signup" className={styles.nav__accLink}>
+                <button className={styles.createAccount}>Create Account</button>
+              </Link>
             </Nav>
           )}
         </Navbar.Collapse>

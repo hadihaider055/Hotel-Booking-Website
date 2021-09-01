@@ -1,0 +1,169 @@
+.searchPage {
+}
+.searchPage__div {
+  position: absolute;
+  margin: 0 auto;
+  top: 19%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100vw;
+}
+.search__main {
+  margin: 0 auto;
+  width: 80vw;
+  height: 100vh;
+  margin-top: 10%;
+}
+.card__searchbar {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  flex-wrap: wrap;
+}
+.searchPage__form {
+  background-color: #20274d;
+  margin: 0 auto;
+  padding: 30px;
+  width: 100vw;
+}
+.form__city {
+  width: 200px;
+  padding: 10px;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 0.03em;
+  border-radius: 0.4em;
+  margin: 0 3px;
+}
+.form__checkinDate,
+.form__checkoutDate {
+  width: 200px;
+  padding: 10px;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 0.03em;
+  background-color: #ffffff;
+  border-radius: 0.4em;
+}
+.form__checkinDate:focus,
+.form__checkoutDate:focus {
+  border: none !important;
+  outline: none;
+}
+.date__label {
+  background-color: #ffffff;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 0.4em;
+  margin: 0 3px;
+}
+.heroform__rooms {
+  width: 200px;
+  padding: 10px;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 0.03em;
+  border-radius: 0.4em;
+  margin: 0 3px;
+}
+.heroform__btn {
+  margin: 0 auto;
+  border: none;
+  padding: 0.6em;
+  background-color: #87b3fb;
+  font-weight: 500;
+  border-radius: 0.4em;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  width: 150px;
+  height: 50px;
+}
+.heroform__btn:hover {
+  box-shadow: 0 0 10px #87b3fbab;
+  background-color: #7aacfd;
+  transition: 0.3s all ease-in-out;
+}
+.search__card {
+  display: flex;
+  border: 1px solid #0000003e;
+  margin-bottom: 3em;
+  border-radius: 0.6em;
+}
+.search__filterArea {
+}
+.imgDiv {
+  height: 100%;
+}
+.card__img {
+  width: 20em;
+  height: 20em;
+  border-radius: 0.6em 0 0 0.6em;
+}
+.card__data {
+  flex: 0.9;
+  padding: 2em;
+}
+.card__name {
+  font-family: "Georama", sans-serif;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+.card__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card__city {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.card__address {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+.card__description {
+  font-family: "Georama", sans-serif;
+  font-size: 0.8em;
+}
+.card__rating {
+  font-size: 0.9em;
+}
+.card__bookingDiv {
+  padding: 2em;
+}
+.card__price {
+  font-family: "Georama", sans-serif;
+  font-weight: 700;
+}
+.card__btn {
+  border: none;
+  padding: 0.6em;
+  border: 1px solid #87b3fb;
+  border-radius: 0.7em;
+  color: #ffffff;
+  background-color: #87b3fb;
+  font-weight: 500;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 0.05em;
+  margin-top: 3em;
+}
+.card__btn:hover {
+  padding: 0.6em;
+  border-radius: 0.7em;
+  box-shadow: 0 0 20px #87b3fbab;
+  transition: 0.3s all ease-in-out;
+}

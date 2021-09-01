@@ -1,11 +1,12 @@
 .topDest__div {
   margin: 0 auto;
   margin-top: 10%;
+  overflow-x: hidden;
 }
+
 .topDest__header {
   margin: 0 auto;
 }
-
 .topDest__title {
   font-family: "Georama", sans-serif;
   font-weight: 600;
@@ -25,12 +26,21 @@
   margin-top: 3em;
 }
 .dest__imgDiv {
+  margin-left: 10px;
+}
+.destImg__span {
 }
 
 .dest__img {
-  border-radius: 50%;
-  width: 170px;
+  border-radius: 50% 50%;
+  width: 150px;
   height: 150px;
+  cursor: pointer;
+}
+.dest__img:hover {
+  box-shadow: 0 0 20px #87b3fb;
+  transform: scale(1.03);
+  transition: 0.5s all ease-in-out;
 }
 .dest__nameDiv {
   margin-top: 1em;
@@ -42,16 +52,13 @@
 }
 
 @media (min-width: 200px) and (max-width: 400px) {
-  .topDest__div {
+  .dest__img {
+    height: 110px;
   }
 }
 
 @media (min-width: 401px) and (max-width: 600px) {
-  .topDest__div {
-  }
-}
-
-@media (min-width: 601px) and (max-width: 850px) {
-  .topDest__div {
+  .dest__img {
+    height: 110px;
   }
 }

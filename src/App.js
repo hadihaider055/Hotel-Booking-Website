@@ -6,6 +6,7 @@ import { store } from "./Global State/Store";
 import LoginPage from "./Pages/Login";
 import { Provider } from "react-redux";
 import HomePage from "./Pages/Home";
+import SearchPage from "./Pages/Search";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route exact path="/signup" component={SignupPage} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/" component={HomePage} />
+            <Route exact path="/search" component={SearchPage} />
           </div>
         </Provider>
       </Switch>

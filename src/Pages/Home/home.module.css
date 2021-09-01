@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   height: 500px;
 }
+
 @media (min-width: 200px) and (max-width: 450px) {
   .coverImg {
     height: 530px;

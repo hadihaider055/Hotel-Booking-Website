@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./login.module.css";
 import HotelImage from "../../Assets/hotel-img.jpg";
 import { Email, VisibilityOff } from "@material-ui/icons";
@@ -17,6 +17,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userNotCorrect, setUserNotCorrect] = useState(false);
+
   const handleLogin = (e) => {
     e.preventDefault();
     signinUser(auth, email, password)
