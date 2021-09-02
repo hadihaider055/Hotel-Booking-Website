@@ -14,7 +14,6 @@ const SearchPage = () => {
   const appUser = useSelector((state) => {
     return state.Filteredhotels ? state.Filteredhotels : state.hotels;
   });
-
   const searchUser = useSelector((state) => {
     return state.userSearch;
   });
@@ -33,8 +32,8 @@ const SearchPage = () => {
     dispatch(user_search(city, rooms, checkInDate, checkOutDate));
   };
 
-  const handleBookSlot = (event) => {
-    dispatch(book_slot(event));
+  const handleBookSlot = (hotelName, price) => {
+    dispatch(book_slot(hotelName, price));
     history.push("/booking");
   };
 
@@ -139,10 +138,16 @@ const SearchPage = () => {
                     </p>
                   </div>
                   <div className={styles.card__bookingDiv}>
-                    <h3 className={styles.card__price}>{item.price}</h3>
+                    <h3 className={styles.card__price}>
+                      <span>{item.currency}</span>
+                      {searchUser[0].rooms === ""
+                        ? `${item.price * 1}`
+                        : `${item.price * searchUser[0].rooms}`}
+                      <span>{item.chargesBy}</span>
+                    </h3>
                     <button
                       className={styles.card__btn}
-                      onClick={() => handleBookSlot(item.name)}
+                      onClick={() => handleBookSlot(item.name, item.price)}
                     >
                       Book your Slot!
                     </button>

@@ -5,7 +5,6 @@ import {
   USER_SEARCH,
   BOOK_SLOT,
   PERSONAL_INFO,
-  personal_info,
 } from "../Action";
 
 const initialState = {
@@ -20,7 +19,9 @@ const initialState = {
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/213406070.jpg?k=ce8dd87384a0f68d569ad3bad99d8b20787d64506f27acde9b552be65b548c29&o=&hp=1",
       city: "Karachi",
       rating: "⭐⭐⭐⭐",
-      price: "PKR.5000/day",
+      price: "5000",
+      currency: "PKR.",
+      chargesBy: "/day",
     },
     {
       id: 2,
@@ -32,7 +33,9 @@ const initialState = {
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/43715866.jpg?k=c97793641733162778b4e78f5354ae19042863e37c8a58ce9b419cff64189c8b&o=&hp=1",
       city: "Karachi",
       rating: "⭐⭐⭐⭐⭐",
-      price: "PKR.8000/day",
+      price: "8000",
+      currency: "PKR.",
+      chargesBy: "/day",
     },
     {
       id: 3,
@@ -44,7 +47,9 @@ const initialState = {
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/280190481.jpg?k=3e23c1d4e75d4c48b9b5b31f008acdf1e75523bec3149cf651afa8ca0a985d1e&o=&hp=1",
       city: "Karachi",
       rating: "⭐⭐⭐⭐⭐",
-      price: "PKR.6000/day",
+      price: "6000",
+      currency: "PKR.",
+      chargesBy: "/day",
     },
     {
       id: 4,
@@ -57,7 +62,9 @@ const initialState = {
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/218003311.jpg?k=f517869242106e38f707cec1f8f5d77d44499fbe047d6335a10a6b0bc8d5ea39&o=&hp=1",
       city: "Lahore",
       rating: "⭐⭐⭐",
-      price: "PKR.5000/day",
+      price: "5000",
+      currency: "PKR.",
+      chargesBy: "/day",
     },
     {
       id: 5,
@@ -69,7 +76,9 @@ const initialState = {
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/278504590.jpg?k=2d6676b5981e1fafc018b5d092375e37656a136a18b08e07acebf39a6b395ae1&o=&hp=1",
       city: "Lahore",
       rating: "⭐⭐⭐⭐⭐",
-      price: "PKR.10000/day",
+      price: "10000",
+      currency: "PKR.",
+      chargesBy: "/day",
     },
     {
       id: 6,
@@ -81,7 +90,9 @@ const initialState = {
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/310786852.jpg?k=b1082de18a184cfbdfc718e531832514972112cf4df65785b2946e7dcfeeb6ce&o=&hp=1",
       city: "Murree",
       rating: "⭐⭐⭐⭐",
-      price: "PKR.8000/day",
+      price: "8000",
+      currency: "PKR.",
+      chargesBy: "/day",
     },
   ],
   userSearch: [
@@ -93,7 +104,7 @@ const initialState = {
     },
   ],
   user: [],
-  bookSlot: [{ checkInDate: "" }],
+  bookSlot: [{ hotelName: "", price: "" }],
   personalInfo: [
     {
       userFirstName: "",
@@ -145,7 +156,7 @@ export const AppReducer = (state = initialState, action) => {
         bookSlot: [action.payload],
       };
     }
-    case personal_info: {
+    case PERSONAL_INFO: {
       return {
         ...state,
         personalInfo: [action.payload],

@@ -9,6 +9,12 @@ import HomePage from "./Pages/Home";
 import SearchPage from "./Pages/Search";
 import BookPage from "./Pages/Book";
 import ScrollToTop from "./Components/Scroll to Top";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe(
+  "pk_test_51JVAjYIVqNzAmNJkn9ul4jJbs2GSNw3QQzBrLDHxjqKZe55q2GEodHZLXMCElBkxPe3WDevsyRiS2CDgPcSBwcVn00rh7qeMwN"
+);
 function App() {
   return (
     <Router>
@@ -20,7 +26,9 @@ function App() {
             <Route exact path="/signup" component={SignupPage} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/hotels" component={SearchPage} />
-            <Route exact path="/booking" component={BookPage} />
+            <Elements stripe={promise}>
+              <Route exact path="/booking" component={BookPage} />
+            </Elements>
           </div>
         </Provider>
       </Switch>

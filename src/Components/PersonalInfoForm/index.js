@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { personal_info } from "../../Global State/Action";
 import styles from "./PersonalInfo.module.css";
 
 const PersonalInfoForm = ({ activeStep, setActiveStep }) => {
@@ -28,7 +29,7 @@ const PersonalInfoForm = ({ activeStep, setActiveStep }) => {
   const handlePersonalInfo = () => {
     setActiveStep(activeStep + 1);
     dispatch(
-      personalInfo(
+      personal_info(
         userFirstName,
         userLastName,
         userEmail,
@@ -124,7 +125,7 @@ const PersonalInfoForm = ({ activeStep, setActiveStep }) => {
         />
         <input
           type="text"
-          value={hotelName}
+          value={hotelName[0].hotelname}
           disabled
           className={styles.hotel__name}
         />

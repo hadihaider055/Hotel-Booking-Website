@@ -1,0 +1,7 @@
+.paymentDiv {
+  margin: 0 auto;
+  max-width: 500px;
+}
+.cardElement {
+  border: 1px solid #000000;
+}

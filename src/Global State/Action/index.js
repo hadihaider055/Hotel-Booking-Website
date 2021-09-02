@@ -32,10 +32,10 @@ export const user_search = (city, rooms, checkInDate, checkOutDate) => {
   };
 };
 
-export const book_slot = (hotelname) => {
+export const book_slot = (hotelname, price) => {
   return {
     type: BOOK_SLOT,
-    payload: hotelname,
+    payload: { hotelname, price },
   };
 };
 
