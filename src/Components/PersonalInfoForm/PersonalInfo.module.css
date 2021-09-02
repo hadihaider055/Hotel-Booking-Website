@@ -1,0 +1,74 @@
+.personalInfo__main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.f__name,
+.l__name,
+.home__city,
+.home__state,
+.home__country,
+.zip__code {
+  margin: 10px;
+  width: 220px;
+  border: 1px solid #0000008a;
+  height: 40px;
+  border-radius: 0.6em;
+  padding: 10px;
+  font-family: "Georama", sans-serif;
+  outline: none;
+}
+.email__address,
+.ph__number,
+.passport__number,
+.home__address {
+  margin: 10px;
+  width: 460px;
+  border: 1px solid #0000008a;
+  height: 40px;
+  border-radius: 0.6em;
+  padding: 10px;
+  font-family: "Georama", sans-serif;
+  outline: none;
+}
+.hotel__name,
+.rooms {
+  color: #0000009b;
+  margin: 10px;
+  width: 460px;
+  border: 1px solid #0000008a;
+  height: 40px;
+  border-radius: 0.6em;
+  padding: 10px;
+  font-family: "Georama", sans-serif;
+  outline: none;
+}
+.checkin_date,
+.checkoutDate {
+  color: #0000009b;
+  margin: 10px;
+  width: 220px;
+  border: 1px solid #0000008a;
+  height: 40px;
+  border-radius: 0.6em;
+  padding: 10px;
+  font-family: "Georama", sans-serif;
+  outline: none;
+}
+.activeStepNext {
+  border: none;
+  padding: 0.6em;
+  border: 1px solid #87b3fb;
+  border-radius: 0.6em;
+  font-weight: 500;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  width: 460px;
+  background-color: #87b3fb;
+}
+.activeStepNext:hover {
+  padding: 0.6em;
+  border-radius: 0.7em;
+  box-shadow: 0 0 20px #87b3fbab;
+  transition: 0.3s all ease-in-out;
+}

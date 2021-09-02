@@ -1,4 +1,12 @@
-import { SIGN_UP, LOG_IN, SIGN_OUT, USER_SEARCH } from "../Action";
+import {
+  SIGN_UP,
+  LOG_IN,
+  SIGN_OUT,
+  USER_SEARCH,
+  BOOK_SLOT,
+  PERSONAL_INFO,
+  personal_info,
+} from "../Action";
 
 const initialState = {
   hotels: [
@@ -76,8 +84,30 @@ const initialState = {
       price: "PKR.8000/day",
     },
   ],
-  userSearch: [],
+  userSearch: [
+    {
+      city: "",
+      rooms: "",
+      checkInDate: "",
+      checkOutDate: "",
+    },
+  ],
   user: [],
+  bookSlot: [{ checkInDate: "" }],
+  personalInfo: [
+    {
+      userFirstName: "",
+      userLastName: "",
+      userEmail: "",
+      userPhoneNumber: "",
+      userPassport: "",
+      userAddress: "",
+      userCity: "",
+      userCountry: "",
+      userState: "",
+      userZipCode: "",
+    },
+  ],
 };
 
 export const AppReducer = (state = initialState, action) => {
@@ -104,9 +134,21 @@ export const AppReducer = (state = initialState, action) => {
       return {
         ...state,
         userSearch: [action.payload],
-        hotels: state.hotels.filter(
+        Filteredhotels: state.hotels.filter(
           (hotel) => hotel.city === action.payload.city
         ),
+      };
+    }
+    case BOOK_SLOT: {
+      return {
+        ...state,
+        bookSlot: [action.payload],
+      };
+    }
+    case personal_info: {
+      return {
+        ...state,
+        personalInfo: [action.payload],
       };
     }
     default: {

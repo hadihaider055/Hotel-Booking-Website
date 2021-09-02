@@ -19,7 +19,7 @@ const HeroForm = () => {
   const handleGetForm = (e) => {
     e.preventDefault();
     dispatch(user_search(city, rooms, checkInDate, checkOutDate));
-    history.push("/search");
+    history.push("/hotels");
   };
   return (
     <div className={styles.heroForm__main}>
@@ -35,6 +35,7 @@ const HeroForm = () => {
             className={styles.form__city}
             onChange={(e) => setCity(e.target.value)}
             value={city}
+            required
           >
             <option value="">Select City</option>
             <option value="Karachi">Karachi</option>

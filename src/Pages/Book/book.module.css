@@ -1,0 +1,26 @@
+.booking__form {
+  position: absolute;
+  top: 18%;
+  margin: 0 auto;
+  text-align: center;
+  width: 100vw;
+}
+.booking__formHeader {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #20274d;
+  color: #ffffff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.07em;
+  font-size: 1.3em;
+}
+.booking__heading {
+  text-align: center;
+  font-size: 1.4em;
+  font-family: "Georama", sans-serif;
+  font-weight: 700;
+  margin: 0 auto;
+}

@@ -69,9 +69,10 @@ const NavbarComp = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/search">Hotels & Homes</Nav.Link>
+            <Nav.Link href="/hotels">Hotels & Homes</Nav.Link>
             <Nav.Link href="#pricing">Car rentals</Nav.Link>
             <Nav.Link href="#pricing">Appartments</Nav.Link>
+            <Nav.Link href="">Link Property</Nav.Link>
           </Nav>
           {userLoggedIn ? (
             <Nav>
