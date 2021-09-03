@@ -2,11 +2,9 @@
   width: 100vw;
   height: 50px;
   background-color: #e8e8e8;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 11%;
   padding: 0 15px 0 0;
 }
 .headerCovid__text {
@@ -15,15 +13,7 @@
 }
 
 @media (min-width: 200px) and (max-width: 600px) {
-  .headerCovid {
-    top: 55px;
-  }
   .headerCovid__text {
-    font-size: 0.75em;
-  }
-}
-@media (min-width: 601px) and (max-width: 986px) {
-  .headerCovid {
-    top: 55px;
+    font-size: 0.65em;
   }
 }

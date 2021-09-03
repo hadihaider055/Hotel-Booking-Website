@@ -1,7 +1,7 @@
 .navbar {
   background-color: #ffffff !important;
   font-family: "Montserrat", sans-serif;
-  position: absolute;
+  /* position: absolute; */
   width: 100vw;
   z-index: 1 !important;
 }

@@ -1,6 +1,5 @@
 .booking__form {
   position: absolute;
-  top: 18%;
   margin: 0 auto;
   text-align: center;
   width: 100vw;
@@ -23,4 +22,10 @@
   font-family: "Georama", sans-serif;
   font-weight: 700;
   margin: 0 auto;
+}
+
+@media (min-width: 200px) and (max-width: 400px) {
+  .booking__formHeader {
+    font-size: 1em;
+  }
 }

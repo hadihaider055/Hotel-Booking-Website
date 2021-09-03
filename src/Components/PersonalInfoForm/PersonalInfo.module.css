@@ -72,3 +72,87 @@
   box-shadow: 0 0 20px #87b3fbab;
   transition: 0.3s all ease-in-out;
 }
+
+@media (min-width: 400px) and (max-width: 500px) {
+  .f__name,
+  .l__name,
+  .home__city,
+  .home__state,
+  .home__country,
+  .zip__code {
+    width: 180px;
+  }
+  .email__address,
+  .ph__number,
+  .passport__number,
+  .home__address {
+    width: 380px;
+  }
+  .hotel__name,
+  .rooms {
+    width: 380px;
+  }
+  .checkin_date,
+  .checkoutDate {
+    width: 180px;
+  }
+  .activeStepNext {
+    width: 380px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+  .f__name,
+  .l__name,
+  .home__city,
+  .home__state,
+  .home__country,
+  .zip__code {
+    width: 130px;
+  }
+  .email__address,
+  .ph__number,
+  .passport__number,
+  .home__address {
+    width: 280px;
+  }
+  .hotel__name,
+  .rooms {
+    width: 280px;
+  }
+  .checkin_date,
+  .checkoutDate {
+    width: 130px;
+  }
+  .activeStepNext {
+    width: 280px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 299px) {
+  .f__name,
+  .l__name,
+  .home__city,
+  .home__state,
+  .home__country,
+  .zip__code {
+    width: 190px;
+  }
+  .email__address,
+  .ph__number,
+  .passport__number,
+  .home__address {
+    width: 190px;
+  }
+  .hotel__name,
+  .rooms {
+    width: 190px;
+  }
+  .checkin_date,
+  .checkoutDate {
+    width: 190px;
+  }
+  .activeStepNext {
+    width: 190px;
+  }
+}

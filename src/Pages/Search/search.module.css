@@ -1,7 +1,6 @@
 .searchPage__div {
   position: absolute;
   margin: 0 auto;
-  top: 19%;
   left: 0;
   right: 0;
   height: 100%;
@@ -36,7 +35,7 @@
   font-family: "Georama", sans-serif;
   letter-spacing: 0.03em;
   border-radius: 0.4em;
-  margin: 0 3px;
+  margin: 3px 3px;
 }
 .form__checkinDate,
 .form__checkoutDate {
@@ -62,7 +61,7 @@
   cursor: pointer;
   padding: 0 10px;
   border-radius: 0.4em;
-  margin: 0 3px;
+  margin: 3px 3px;
 }
 .heroform__rooms {
   width: 200px;
@@ -73,7 +72,7 @@
   font-family: "Georama", sans-serif;
   letter-spacing: 0.03em;
   border-radius: 0.4em;
-  margin: 0 3px;
+  margin: 3px 3px;
 }
 .heroform__btn {
   margin: 0 auto;
@@ -94,10 +93,12 @@
   transition: 0.3s all ease-in-out;
 }
 .search__card {
+  margin: 0 auto;
   display: flex;
   border: 1px solid #0000003e;
   margin-bottom: 3em;
   border-radius: 0.6em;
+  flex-wrap: wrap;
 }
 .search__filterArea {
 }
@@ -105,6 +106,7 @@
   height: 100%;
 }
 .card__img {
+  margin: 0 auto;
   width: 20em;
   height: 20em;
   border-radius: 0.6em 0 0 0.6em;
@@ -121,6 +123,7 @@
 .card__header {
   display: flex;
   justify-content: flex-start;
+  margin: 0 auto;
   align-items: center;
 }
 .card__city {
@@ -141,6 +144,7 @@
   font-size: 0.9em;
 }
 .card__bookingDiv {
+  margin: 0 auto;
   padding: 2em;
 }
 .card__price {
@@ -164,4 +168,148 @@
   border-radius: 0.7em;
   box-shadow: 0 0 20px #87b3fbab;
   transition: 0.3s all ease-in-out;
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+  .heroForm__heading {
+    font-size: 2em;
+  }
+  .heroform__tag {
+    font-size: 1em;
+  }
+}
+@media (min-width: 606px) and (max-width: 919px) {
+  .form__city {
+    width: 162.5px;
+  }
+  .heroForm__heading {
+    font-size: 2em;
+  }
+  .heroform__tag {
+    font-size: 1em;
+  }
+}
+@media (min-width: 593px) and (max-width: 605px) {
+  .heroForm__heading {
+    font-size: 2em;
+  }
+  .heroform__tag {
+    font-size: 1em;
+  }
+  .form__checkoutDate {
+    width: 187px;
+  }
+  .card__img {
+    width: 100vw;
+    height: 18em;
+  }
+}
+@media (min-width: 313px) and (max-width: 592px) {
+  .form__city {
+    width: 295px;
+  }
+  .form__checkoutDate {
+    width: 200px;
+  }
+  .form__checkinDate {
+    width: 212px;
+  }
+  .heroform__rooms {
+    width: 295px;
+  }
+  .heroform__btn {
+    width: 295px;
+  }
+  .card__name {
+    font-size: 1.5em;
+  }
+  .card__img {
+    width: 100vw;
+    height: 18em;
+  }
+  .card__city {
+    font-size: 0.6em;
+  }
+  .card__address {
+    font-size: 0.7em;
+  }
+  .card__description {
+    font-size: 0.5em;
+  }
+  .card__rating {
+    font-size: 0.5em;
+  }
+  .card__price {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .card__btn {
+    margin-top: 0.4em;
+  }
+  .card__bookingDiv {
+    padding: 3em 0 0.5em 0;
+  }
+}
+@media (min-width: 242px) and (max-width: 312px) {
+  .form__checkoutDate {
+    width: 160px;
+  }
+  .form__checkinDate {
+    width: 170px;
+  }
+  .date__label {
+    font-size: 1em;
+  }
+  .form__city {
+    width: 295px;
+  }
+  .heroform__rooms {
+    width: 295px;
+  }
+  .heroform__btn {
+    width: 295px;
+  }
+  .card__name {
+    font-size: 1.5em;
+  }
+
+  .card__city {
+    font-size: 0.6em;
+  }
+  .card__address {
+    font-size: 0.7em;
+  }
+  .card__description {
+    font-size: 0.5em;
+  }
+  .card__rating {
+    font-size: 0.5em;
+  }
+  .card__price {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .card__btn {
+    margin-top: 0.4em;
+  }
+  .card__bookingDiv {
+    padding: 0 0 0.5em 0;
+  }
+}
+@media (min-width: 200px) and (max-width: 241px) {
+  .form__city {
+    width: 295px;
+  }
+  .form__checkoutDate {
+    width: 140px;
+  }
+  .form__checkinDate {
+    width: 150px;
+  }
+  .heroform__rooms {
+    width: 295px;
+  }
+  .date__label {
+    font-size: 0.75em;
+  }
 }
