@@ -1,0 +1,27 @@
+.pageNotFound__div {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 700px;
+  margin-top: 7%;
+}
+.pageNotFound {
+}
+.backtoHome {
+  border: none;
+  padding: 0.6em;
+  border: 1px solid #87b3fb;
+  border-radius: 0.6em;
+  font-weight: 500;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  width: 90%;
+  background-color: #87b3fb;
+  margin-top: 20px;
+}
+.backtoHome:hover {
+  padding: 0.6em;
+  border-radius: 0.7em;
+  box-shadow: 0 0 20px #87b3fbab;
+  transition: 0.3s all ease-in-out;
+}

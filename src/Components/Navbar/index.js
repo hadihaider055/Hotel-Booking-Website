@@ -11,6 +11,8 @@ import { sign_out } from "../../Global State/Action";
 const NavbarComp = () => {
   const [scrolled, setScrolled] = useState(false);
   const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const [navbarToggle, setNavbarToggle] = useState(false);
+
   const appUser = useSelector((state) => {
     return state.user;
   });
@@ -51,13 +53,22 @@ const NavbarComp = () => {
   if (scrolled) {
     navbarClasses.push("scrolled");
   }
+  if (navbarToggle === true) {
+    navbarClasses.push("navbarToggle");
+  } else if (navbarToggle === true && scrolled === true) {
+    navbarClasses.push("navbarToggleScrolled");
+  } else {
+  }
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
       bg="light"
       variant="light"
-      className={scrolled ? styles.navbar__active : styles.navbar}
+      className={`
+        ${navbarToggle ? styles.navbarToggle : styles.navbar} 
+        ${scrolled ? styles.navbar__active : styles.navbar}
+        ${navbarClasses[2] ? styles.navbarToggleScrolled : styles.navbar}`}
     >
       <Container>
         <Navbar.Brand className={styles.navbarBrand}>
@@ -66,8 +77,15 @@ const NavbarComp = () => {
             Hotel Booking
           </Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          className={styles.navbar__toggle}
+          onClick={() => setNavbarToggle(!navbarToggle)}
+        />
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className={styles.navbar__collapse}
+        >
           <Nav className="me-auto">
             <Nav.Link href="/hotels">Hotels & Homes</Nav.Link>
             <Nav.Link href="#pricing">Car rentals</Nav.Link>

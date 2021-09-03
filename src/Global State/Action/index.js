@@ -67,3 +67,4 @@ export const personal_info = (
     },
   };
 };
+

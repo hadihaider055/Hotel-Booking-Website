@@ -1,51 +1,44 @@
-.paymentDiv {
+.checkout__main {
   margin: 0 auto;
   max-width: 500px;
 }
-.subTotal {
+.checkout__heading {
   font-family: "Georama", sans-serif;
+  font-size: 1.5em;
   font-weight: 600;
-  margin-top: 40px;
+  margin-bottom: 1em;
 }
-.payment__form {
-  margin: 0 auto;
-  text-align: center;
+.checkout__review {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 20px;
 }
-.cardNumber__Element {
-  margin: 0 auto;
-  margin: 10px;
-  width: 96%;
-  border: 1px solid #0000008a;
-  height: 40px;
-  border-radius: 0.6em;
-  padding: 10px;
-  font-family: "Georama", sans-serif;
-  outline: none;
-}
-.card__details {
+.checkout__name,
+.checkout__email,
+.checkout__phNumber,
+.checkout__passportNumber,
+.checkout__address,
+.checkout__city,
+.checkout__state,
+.checkout__zipCode,
+.checkout__country,
+.checkout__hotelName,
+.checkout__checkInDate,
+.checkout__checkOutDate,
+.checkout__rooms {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  padding: 6px;
 }
-.cardExpiry__Element {
-  margin: 10px;
-  width: 46%;
-  border: 1px solid #0000008a;
-  height: 40px;
-  border-radius: 0.6em;
-  padding: 10px;
-  font-family: "Georama", sans-serif;
-  outline: none;
+.checkout__name > span {
+  text-align: right !important;
 }
-.cardCvc__Element {
-  margin: 10px;
-  width: 46%;
-  border: 1px solid #0000008a;
-  height: 40px;
-  border-radius: 0.6em;
-  padding: 10px;
-  font-family: "Georama", sans-serif;
-  outline: none;
+.checkout__subHeading {
+  text-align: left !important;
 }
-.payment__btn {
+.checkout__Bookbtn {
   border: none;
   padding: 0.6em;
   border: 1px solid #87b3fb;
@@ -56,14 +49,15 @@
   color: #ffffff;
   width: 96%;
   background-color: #87b3fb;
+  margin-top: 20px;
 }
-.payment__btn:hover {
+.checkout__Bookbtn:hover {
   padding: 0.6em;
   border-radius: 0.7em;
   box-shadow: 0 0 20px #87b3fbab;
   transition: 0.3s all ease-in-out;
 }
-.back__btn {
+.checkout__Backbtn {
   margin-top: 10px;
   border: none;
   padding: 0.6em;
@@ -76,7 +70,7 @@
   width: 96%;
   background-color: #cbcbcb3e;
 }
-.back__btn:hover {
+.checkout__Backbtn:hover {
   transition: 0.3s all ease-in-out;
   background-color: #cbcbcb90;
   padding: 0.6em;

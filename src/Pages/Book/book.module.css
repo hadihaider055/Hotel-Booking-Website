@@ -3,6 +3,7 @@
   margin: 0 auto;
   text-align: center;
   width: 100vw;
+  height: 100vh;
 }
 .booking__formHeader {
   margin: 0 auto;
@@ -15,6 +16,7 @@
   align-items: center;
   letter-spacing: 0.07em;
   font-size: 1.3em;
+  padding: 5px;
 }
 .booking__heading {
   text-align: center;
@@ -23,7 +25,9 @@
   font-weight: 700;
   margin: 0 auto;
 }
-
+.stepper__Container {
+  overflow-y: auto;
+}
 @media (min-width: 200px) and (max-width: 400px) {
   .booking__formHeader {
     font-size: 1em;

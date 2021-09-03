@@ -26,15 +26,21 @@ const SearchPage = () => {
   const [rooms, setRooms] = useState(searchUser[0].rooms);
   const [checkInDate, setCheckInDate] = useState(searchUser[0].checkInDate);
   const [checkOutDate, setCheckOutDate] = useState(searchUser[0].checkOutDate);
+  const [eventSelected, setEventSelected] = useState(false);
 
   const handleGetForm = (e) => {
     e.preventDefault();
     dispatch(user_search(city, rooms, checkInDate, checkOutDate));
+    setEventSelected(true);
   };
 
   const handleBookSlot = (hotelName, price) => {
     dispatch(book_slot(hotelName, price));
-    history.push("/booking");
+    if (eventSelected) {
+      history.push("/booking");
+    } else {
+      alert("Please select Check-in and Check-out Date");
+    }
   };
 
   return (

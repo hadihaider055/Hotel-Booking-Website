@@ -119,6 +119,7 @@ const initialState = {
       userZipCode: "",
     },
   ],
+
 };
 
 export const AppReducer = (state = initialState, action) => {
@@ -162,6 +163,7 @@ export const AppReducer = (state = initialState, action) => {
         personalInfo: [action.payload],
       };
     }
+   
     default: {
       return state;
     }

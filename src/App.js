@@ -1,13 +1,19 @@
 import React from "react";
 import "./App.css";
 import SignupPage from "./Pages/Sign Up";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import { store } from "./Global State/Store";
 import LoginPage from "./Pages/Login";
 import { Provider } from "react-redux";
 import HomePage from "./Pages/Home";
 import SearchPage from "./Pages/Search";
 import BookPage from "./Pages/Book";
+import PageNotFound from "./Pages/404Page";
 import ScrollToTop from "./Components/Scroll to Top";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
@@ -29,6 +35,7 @@ function App() {
             <Elements stripe={promise}>
               <Route exact path="/booking" component={BookPage} />
             </Elements>
+            <Route component={PageNotFound} />
           </div>
         </Provider>
       </Switch>

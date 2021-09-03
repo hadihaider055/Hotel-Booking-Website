@@ -15,16 +15,24 @@ const PersonalInfoForm = ({ activeStep, setActiveStep }) => {
     return state.personalInfo;
   });
 
-  const [userFirstName, setUserFirstName] = useState("");
-  const [userLastName, setUserLastName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [userPhoneNumber, setUserPhoneNumber] = useState("");
-  const [userPassport, setUserPassport] = useState("");
-  const [userAddress, setUserAddress] = useState("");
-  const [userCity, setUserCity] = useState("");
-  const [userState, setUserState] = useState("");
-  const [userCountry, setUserCountry] = useState("");
-  const [userZipCode, setUserZipCode] = useState("");
+  const [userFirstName, setUserFirstName] = useState(
+    personalInfo[0].userFirstName
+  );
+  const [userLastName, setUserLastName] = useState(
+    personalInfo[0].userLastName
+  );
+  const [userEmail, setUserEmail] = useState(personalInfo[0].userEmail);
+  const [userPhoneNumber, setUserPhoneNumber] = useState(
+    personalInfo[0].userPhoneNumber
+  );
+  const [userPassport, setUserPassport] = useState(
+    personalInfo[0].userPassport
+  );
+  const [userAddress, setUserAddress] = useState(personalInfo[0].userAddress);
+  const [userCity, setUserCity] = useState(personalInfo[0].userCity);
+  const [userState, setUserState] = useState(personalInfo[0].userState);
+  const [userCountry, setUserCountry] = useState(personalInfo[0].userCountry);
+  const [userZipCode, setUserZipCode] = useState(personalInfo[0].userZipCode);
 
   const handlePersonalInfo = () => {
     setActiveStep(activeStep + 1);

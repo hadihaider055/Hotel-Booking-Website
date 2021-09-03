@@ -9,53 +9,16 @@ import StepLabel from "@material-ui/core/StepLabel";
 import PersonalInfoForm from "../../Components/PersonalInfoForm";
 import Button from "@material-ui/core/Button";
 import PaymentInfo from "../../Components/PaymentInfo";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "100%",
-  },
-  backButton: {
-    marginRight: theme.spacing(1),
-  },
-  instructions: {
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
-  },
-}));
+import FinalizingCheckout from "../../Components/FinalizingCheckout";
 
 function getSteps() {
   return ["Personal Information", "Payment", "Finalizing"];
 }
 
-function getStepContent(stepIndex) {
-  switch (stepIndex) {
-    case 0:
-      return "Add your Personal Information...";
-    case 1:
-      return "Add your payment details...";
-    case 2:
-      return "Review and Submit!";
-    default:
-      return "Unknown stepIndex";
-  }
-}
-
 const BookPage = () => {
-  const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
-  };
   return (
     <div>
       <NavbarComp />
@@ -66,7 +29,7 @@ const BookPage = () => {
             Book Your Slot by Filling Form
           </h1>
         </div>
-        <div className={classes.root}>
+        <div className={styles.stepper__Container}>
           <Stepper activeStep={activeStep} alternativeLabel>
             {steps.map((label) => (
               <Step key={label}>
@@ -74,14 +37,25 @@ const BookPage = () => {
               </Step>
             ))}
           </Stepper>
+          {activeStep === 0 ? (
+            <PersonalInfoForm
+              activeStep={activeStep}
+              setActiveStep={setActiveStep}
+            />
+          ) : null}
+          {activeStep === 1 ? (
+            <PaymentInfo
+              activeStep={activeStep}
+              setActiveStep={setActiveStep}
+            />
+          ) : null}
+          {activeStep === 2 ? (
+            <FinalizingCheckout
+              activeStep={activeStep}
+              setActiveStep={setActiveStep}
+            />
+          ) : null}
         </div>
-        {activeStep === 0 ? (
-          <PersonalInfoForm
-            activeStep={activeStep}
-            setActiveStep={setActiveStep}
-          />
-        ) : null}
-        {activeStep === 1 ? <PaymentInfo /> : null}
       </div>
     </div>
   );
