@@ -30,7 +30,7 @@ const BookPage = () => {
           </h1>
         </div>
         <div className={styles.stepper__Container}>
-          <Stepper activeStep={activeStep} alternativeLabel>
+          <Stepper activeStep={activeStep}>
             {steps.map((label) => (
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>

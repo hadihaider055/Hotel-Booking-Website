@@ -6,6 +6,7 @@ import {
   Switch,
   Route,
   Redirect,
+  useHistory,
 } from "react-router-dom";
 import { store } from "./Global State/Store";
 import LoginPage from "./Pages/Login";
@@ -26,8 +27,8 @@ function App() {
     <Router>
       <ScrollToTop />
       <Switch>
-        <Provider store={store}>
-          <div className="App">
+        <div className="App">
+          <Provider store={store}>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/signup" component={SignupPage} />
             <Route exact path="/login" component={LoginPage} />
@@ -35,9 +36,8 @@ function App() {
             <Elements stripe={promise}>
               <Route exact path="/booking" component={BookPage} />
             </Elements>
-            <Route component={PageNotFound} />
-          </div>
-        </Provider>
+          </Provider>
+        </div>
       </Switch>
     </Router>
   );

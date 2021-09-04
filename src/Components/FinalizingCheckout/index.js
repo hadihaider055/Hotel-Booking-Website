@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import styles from "./finalizingCheckout.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { personal_info } from "../../Global State/Action";
 
 const FinalizingCheckout = ({ activeStep, setActiveStep }) => {
   const history = useHistory();
+  const dispatch = useDispatch();
+
   const personalInfo = useSelector((state) => {
     return state.personalInfo;
   });
@@ -17,8 +20,18 @@ const FinalizingCheckout = ({ activeStep, setActiveStep }) => {
     return state.bookSlot;
   });
 
-  const [reviewed, setReviewed] = useState(false);
+  const [reviewed, setReviewed] = useState(true);
 
+  const [userFirstName, setUserFirstName] = useState("");
+  const [userLastName, setUserLastName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userPhoneNumber, setUserPhoneNumber] = useState("");
+  const [userPassport, setUserPassport] = useState("");
+  const [userAddress, setUserAddress] = useState("");
+  const [userCity, setUserCity] = useState("");
+  const [userState, setUserState] = useState("");
+  const [userCountry, setUserCountry] = useState("");
+  const [userZipCode, setUserZipCode] = useState("");
   const handleBook = () => {
     setReviewed(true);
     if (reviewed) {
@@ -38,6 +51,21 @@ const FinalizingCheckout = ({ activeStep, setActiveStep }) => {
     setTimeout(() => {
       history.push("/");
       setActiveStep(0);
+      setReviewed(false);
+      dispatch(
+        personal_info(
+          userFirstName,
+          userLastName,
+          userEmail,
+          userPhoneNumber,
+          userPassport,
+          userAddress,
+          userCity,
+          userState,
+          userCountry,
+          userZipCode
+        )
+      );
     }, 5000);
   };
 

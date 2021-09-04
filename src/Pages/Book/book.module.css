@@ -26,7 +26,7 @@
   margin: 0 auto;
 }
 .stepper__Container {
-  overflow-y: auto;
+  height: 100vh;
 }
 @media (min-width: 200px) and (max-width: 400px) {
   .booking__formHeader {

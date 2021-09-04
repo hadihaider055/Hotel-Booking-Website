@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Redirect } from "react-router";
 import { personal_info } from "../../Global State/Action";
 import styles from "./PersonalInfo.module.css";
 
@@ -51,6 +52,9 @@ const PersonalInfoForm = ({ activeStep, setActiveStep }) => {
       )
     );
   };
+  if (hotelName[0].hotelName === "" || userSearch[0].checkInDate === "") {
+    return <Redirect to="/hotels" />;
+  }
   return (
     <div className={styles.personalInfo__main}>
       <form onSubmit={handlePersonalInfo}>

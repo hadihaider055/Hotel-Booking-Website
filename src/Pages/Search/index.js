@@ -7,6 +7,7 @@ import moment from "moment";
 import DatePicker from "react-date-picker";
 import { book_slot, user_search } from "../../Global State/Action";
 import { useHistory } from "react-router-dom";
+import Footer from "../../Components/Footer";
 
 const SearchPage = () => {
   const history = useHistory();
