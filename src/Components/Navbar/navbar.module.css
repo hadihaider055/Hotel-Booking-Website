@@ -75,3 +75,7 @@
 .nav__accLink {
   margin: 6px;
 }
+.navbar__link {
+  margin: 5px 5px 0 5px;
+  font-size: 1.19em;
+}
