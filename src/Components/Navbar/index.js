@@ -87,10 +87,10 @@ const NavbarComp = () => {
           className={styles.navbar__collapse}
         >
           <Nav className="me-auto">
-            <Nav.Link href="/hotels">Hotels & Homes</Nav.Link>
-            <Nav.Link href="#pricing">Car rentals</Nav.Link>
-            <Nav.Link href="#pricing">Appartments</Nav.Link>
-            <Nav.Link href="">Link Property</Nav.Link>
+            <Link href="/hotels">Hotels & Homes</Link>
+            <Link href="#pricing">Car rentals</Link>
+            <Link href="#pricing">Appartments</Link>
+            <Link href="">Link Property</Link>
           </Nav>
           {userLoggedIn ? (
             <Nav>
